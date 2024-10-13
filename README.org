@@ -1,0 +1,3 @@
+
+* Personal Config for Emacs
+  still learing emacs so not much here
