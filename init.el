@@ -1,3 +1,22 @@
+;; auto generated stuff
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(org-superstar which-key try use-package goto-chg)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+
+;; ends auto generatd stuff
+
+
 (tool-bar-mode -1) ; remove the tool bar icons
 (scroll-bar-mode -1) ; hide the scroll bar 
 (setq inhibit-splash-screen t) ; Remove the "Welcone to emacs" splash screen
@@ -20,16 +39,12 @@
 (use-package which-key
   :ensure t
   :config (which-key-mode))
+
+;; org stuff
+(use-package org-superstar
+  :ensure t
+  :config 
+  (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1))))
   
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(which-key try use-package goto-chg)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; (require 'org-bullets)
+;; (add-hook 'org-mode-hook #'org-bullets-mode)
